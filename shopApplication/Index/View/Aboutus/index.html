@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+   <title><{$title}></title>
+    <meta name="Keywords" content="<{$keywords}>">
+    <meta name="Description" content="<{$description}>">
+    <php>$logo5=C('logo5');</php>
+    <link rel='icon' href='<{$logo5}>' type='image/x-ico' /> 
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/normalize.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/animate.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/templatemo_misc.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/templatemo_style.css">
+    <link rel="stylesheet" href="__PUBLIC__/Index/Aboutus/index/css/my.css">
+    <style>
+    
+    </style>
+    <script src="__PUBLIC__/Index/Aboutus/index/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=UVLq77yrISccQbi4gEXZw4kR" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12 menulist">
+                <div class="sidebar-menu">
+                <php>
+                    $logo=C('logo');
+                </php>
+                    <div class="logo-wrapper">
+                        <h1 class="logo">
+                            <a rel="nofollow" href="<{:U('Index')}>"><img id="mainlogo" src="<{$logo}>" width="70%" alt="Circle - Free HTML5 Templates">
+                            <span id="company">云南睿投地产管理咨询有限公司</span></a>
+                        </h1>
+                    </div> <!-- /.logo-wrapper -->
+                    
+                    <div class="menu-wrapper">
+                        <ul class="menu">
+                            <li><a class="homebutton" href="#">首页</a></li>
+                            <li><a class="show-2" href="#">关于我们</a></li>
+                            <li><a class="show-1" href="#">团队业务</a></li>
+                            <li><a class="show-3" href="#">睿投视界</a></li>
+                            <li><a class="show-4" href="#" onClick="templatemo_map();">联系我们</a></li>
+                        </ul> <!-- /.menu -->
+                        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                    </div> <!-- /.menu-wrapper -->
+
+                    <!--Arrow Navigation-->
+                    <a id="prevslide" class="load-item"><i class="fa fa-angle-left"></i></a>
+                    <a id="nextslide" class="load-item"><i class="fa fa-angle-right"></i></a>
+
+                </div> <!-- /.sidebar-menu -->
+            </div> <!-- /.col-md-4 -->
+
+            <div class="col-md-8 col-sm-12">
+                
+                <div id="menu-container">
+
+                    <div id="menu-1" class="about content">
+                        <div class="row">
+                            <ul class="tabs">
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab1" class="icon-item">
+                                        <i class="fa fa-users"></i><font class="words">睿投·团队</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab2" class="icon-item">
+                                        <i class="fa fa-th-list"></i><font class="words">业务·范围</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab3" class="icon-item">
+                                        <i class="fa fa-sitemap"></i>
+                                        <font class="words">专项·分类</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                            </ul> <!-- /.tabs -->
+                            <div class="col-md-12 col-sm-12">
+                                
+
+                                <div class="toggle-content text-center business" id="tab2">
+                                    <div class="business-scale">
+                                        <div>
+                                        <ul>规划类
+                                            <li>旅游项目拿地规划</li>
+                                            <li>旅游产业概念规划</li>
+                                            <li>项目可操作性规划</li>
+                                            <li>项目可控性规划</li>
+                                            <li>项目持续性发展规划</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>设计类
+                                            <li>旅游地产建筑设计</li>
+                                            <li>旅游地产景观设计</li>
+                                            <li>旅游地产装饰设计</li>
+                                            <li>旅游地产平面设计</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>策划类
+                                            <li>旅游地产项目业态定位</li>
+                                            <li>旅游地产项目执行策划</li>
+                                            <li>旅游地产项目推广策划</li>
+                                            <li>旅游地产商业策划</li>
+                                            <li>旅游地产招商策划</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>商业类
+                                            <li>金融核心</li>
+                                            <li>贸易核心</li>
+                                            <li>服务核心</li>
+                                            <li>展览核心</li>
+                                            <li>休闲核心</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>咨询类
+                                            <li>旅游地产市场调研</li>
+                                            <li>专项旅游地产分析</li>
+                                            <li>旅游地产项目投资咨询</li>
+                                            <li>旅游地产项目报建咨询</li>
+                                            <li>旅游地产项目建设管理咨询</li>
+                                            <li>旅游地产项目规划咨询</li>
+                                            <li>旅游地产项目管理咨</li>
+                                            <li>旅游地产项目招商运营咨询</li>
+                                            <li>旅游地产项目升级改造咨询</li>
+                                            <li>旅游地产项目营销策划咨询</li>
+                                            <li>文化旅游产业咨询顾问</li>
+                                            <li>专题特色、传统文化信息资源数据库</li>
+                                        </ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="toggle-content text-center business" id="tab3">
+                                   <div class="business-scale">
+                                        <div>
+                                        <ul>自然、历史人文景观旅游区
+                                            <li>名胜风景</li>
+                                            <li>古城古镇</li>
+                                            <li>少数名族文化</li>
+                                            <li>历史、文化遗存</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>体验式旅游渡假区
+                                            <li>农业、乡村、生态体验</li>
+                                            <li>工业园、产业园体验</li>
+                                            <li>革命教育基地</li>
+                                            <li>博物馆、地质地貌、科学自然现象、动植物生态体验</li>
+                                            <li>宗教、信仰聚集地</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <ul>主题乐园
+                                            <li>自然资源主题</li>
+                                            <li>历史资源主题</li>
+                                            <li>人文资源主题</li>
+                                            <li>养生养老主题</li>
+                                            <li>学府城主题</li>
+                                        </ul>
+                                        </div>
+                                       </div>
+                                </div>
+                            </div> <!-- /.col-md-12 -->
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+                            <foreach name="consultants" item="v">
+                            <div class="col-md-4 col-sm-4 consultants">
+                                <div class="member-item">
+                                    <div class="thumb">
+                                        <img src="__PUBLIC__/Index/Consultant/<{$v.image}>" alt="Tracy - Web Designer">
+                                    </div>
+                                    <h4><{$v.name}></h4>
+                                    <h5><{$v.title}></h5>
+                                    <div class="descriptionlist">
+                                    <span><{$v.description}>
+                                    </span>
+                                    </div>
+                                </div> <!-- /.member-item -->
+                            </div> <!-- /.col-md-4 -->
+                        </foreach>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.about -->
+
+                    <div id="menu-2" class="services content">
+                        <div class="row">
+                            <ul class="tabs">
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab4" class="icon-item">
+                                        <i class="fa fa-puzzle-piece"></i>
+                                        <font class="words">睿投·简介</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                                
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab6" class="icon-item">
+                                        <i class="fa fa-leaf"></i>
+                                        <font class="words">睿投·文化</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab5" class="icon-item">
+                                        <i class="fa fa-suitcase"></i>
+                                        <font class="words">睿投·愿景</font>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                            </ul> <!-- /.tabs -->
+                            <div class="col-md-12 col-sm-12">
+                                <div class="toggle-content text-center" id="tab4">
+                                    <h2>云南睿投地产管理咨询有限公司</h2>
+                                    <p class="intro"><strong>云南睿投地产管理咨询有限公司 </strong>是一家专心致力于实操性旅游项目的整体规划、设计、策划、投融资及运营管理的服务机构。公司聚集规划、设计、投资运营策划管理行业专业人士，拥有全产业，广度的资深顾问团队，投身各类专项旅游及商业项目研究和开发多年，建立了强大的旅游及商业资源数据库，是<font size="3px" style="font-weight:600; color:#CE0000">“ <i>特色中国，魅力旅游</i>&nbsp; ”</font>  ──中国创新旅游产业变迁和发展的探索者与践行家。</p>
+                                </div>
+
+                                <div class="toggle-content text-center" id="tab5">
+                                    <h2>睿投愿景</h2>
+                                    <p class="intro"><strong>云南睿投地产管理咨询有限公司</strong>以专业高效的管理团队，结合新兴科技、融合创意的思维，丰富的数据库与特色优质商户联盟支持，着力专业实效的分析及量身定制的投融资计划。</p><br>
+                                </div>
+
+                                <div class="toggle-content text-center" id="tab6">
+                                    <h2>睿投文化</h2>
+                                    <p class="intro">
+                                        <ul class="culture">
+                                            <li>睿于专注：专注目标而开智</li>
+                                            <li>睿在忠诚：忠诚初衷而睿哲</li>
+                                            <li>睿而坚持：坚持不懈而通达</li>
+                                        </ul>
+                                    <br></p>
+                                </div>
+                            </div> <!-- /.col-md-12 -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.services -->
+
+                    <div id="menu-3" class="gallery content">
+                        <div class="row">
+                            <foreach name="cases" item="v">
+                            <div class="col-md-4 col-ms-6">
+                                <div class="g-item">
+                                    <img src="__PUBLIC__/Index/Case/images/<{$v.image}>" alt="">
+                                    <a data-rel="lightbox" class="overlay" href="__PUBLIC__/Index/Case/images/<{$v.image}>" data-id="<{$v.id}>">
+                                        <span><{$v.name}></span>
+                                    </a>
+                                </div> <!-- /.g-item -->
+                            </div> <!-- /.col-md-4 -->
+                            </foreach>
+                        </div> <!-- /.row -->
+                    </div> <!-- /.gallery -->
+
+                    <div id="menu-4" class="contact content">
+                        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <div class="toggle-content text-center spacing" style="margin-top:5px;">
+                                    <h2>联系我们</h2>
+                                    <div class="row">
+                                        <div class="col-md-6" style="border-right: 2px solid black">
+                                            <strong>云南睿投地产管理咨询有限公司</br>
+                                                (昆明总部)<strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <strong>地址:</strong> 云南省昆明市盘龙区北京路金童花园B幢一单元201
+                                    <br><strong>电话:</strong>400-066-8046 | <strong>邮箱:</strong> xxxxxxxx@company.com
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            </div> <!-- /.col-md-12 -->
+                            
+                            <div class="col-md-12">
+                                <div class="google-map" id="baidu-map" style="height:330px">
+                                </div> <!-- /.google-map -->
+                            </div> <!-- /.col-md-12 -->
+                            
+                            <!-- <div class="col-md-12">
+                                <div class="contact-form">
+                                    <div class="row">
+                                        <form action="#" method="post">
+                                            <fieldset class="col-md-4">
+                                                <input id="name" type="text" name="name" placeholder="Name">
+                                            </fieldset>
+                                            <fieldset class="col-md-4">
+                                                <input type="email" name="email" id="email" placeholder="Email">
+                                            </fieldset>
+                                            <fieldset class="col-md-4">
+                                                <input type="text" name="subject" id="subject" placeholder="Subject">
+                                            </fieldset>
+                                            <fieldset class="col-md-12">
+                                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                            </fieldset>
+                                            <fieldset class="col-md-12">
+                                                <input type="submit" name="send" value="Send Message" id="submit" class="button">
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div> 
+                            </div> -->
+                        </div> 
+                    </div>
+
+                </div> <!-- /#menu-container -->
+
+            </div> <!-- /.col-md-8 -->
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container-fluid -->
+    <php>
+        $right=C('sy_webcopyright');
+         $ICP=C('sy_webrecor');
+    </php>
+    <div class="container-fluid">   
+        <div class="row">
+            <div class="col-md-12 footer">
+                <p class="footer-text"><{$right}> &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp; ICP备案号：<{$ICP}></p>
+            </div><!-- /.footer --> 
+        </div>
+    </div> <!-- /.container-fluid -->
+
+    <script src="__PUBLIC__/Index/Aboutus/index/js/vendor/jquery-1.10.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="__PUBLIC__/Index/Aboutus/index/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="__PUBLIC__/Index/Aboutus/index/js/jquery.easing-1.3.js"></script>
+    <script src="__PUBLIC__/Index/Aboutus/index/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/Index/Aboutus/index/js/plugins.js"></script>
+    <script src="__PUBLIC__/Index/Aboutus/index/js/main.js"></script>
+    <script type="text/javascript">
+            
+            jQuery(function ($) {
+
+                $.supersized({
+
+                    // Functionality
+                    slide_interval: 6000, // Length between transitions
+                    transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                    transition_speed: 1000, // Speed of transition
+
+                    // Components                           
+                    slide_links: 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+                    slides: [ // Slideshow Images
+                        {
+                            image: '__PUBLIC__/Index/Aboutus/index/images/templatemo-slide-1.jpg'
+                        }, {
+                            image: '__PUBLIC__/Index/Aboutus/index/images/templatemo-slide-2.jpg'
+                        }, {
+                            image: '__PUBLIC__/Index/Aboutus/index/images/templatemo-slide-3.jpg'
+                        }, {
+                            image: '__PUBLIC__/Index/Aboutus/index/images/templatemo-slide-4.jpg'
+                        }
+                    ]
+
+                });
+            });
+    </script>
+
+        <!-- Google Map -->
+        <!-- Google Map Init-->
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.bg-overlay').animate({opacity:'1'},3000);
+            $('.menulist').animate({left:'0',opacity:'1'},1000,function(){
+                $('#mainlogo').animate({opacity:'1'},"slow",function(){
+                    $('#company').animate({opacity:'1'},"slow",function(){
+                         menudown();
+                        $('.footer').animate({opacity:'1'},"slow")
+                    });
+                });
+            });
+        })
+
+        $('.member-item').click(function(){
+            $(this).find('.descriptionlist').slideToggle();
+        });
+
+       function menudown(){
+        $(".menu").slideToggle(400);
+        return false;
+    };
+
+// 百度地图API功能
+    var map = new BMap.Map("baidu-map");
+    var point = new BMap.Point(102.72954,25.067349);
+    map.centerAndZoom(point, 15);
+    map.panBy(360,150);
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    var label = new BMap.Label("云南睿投地产管理咨询有限公司",{offset:new BMap.Size(20,-10)});
+    marker.setLabel(label);
+    map.addControl(new BMap.NavigationControl());
+    map.addControl(new BMap.OverviewMapControl());
+
+var _APP ='__APP__';
+
+function casejump(id){
+    window.open(_APP+'/Case/casepage/id/'+id+'.html');
+}
+
+
+</script>
+
+
+</body>
+</html>
