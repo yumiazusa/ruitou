@@ -1595,12 +1595,16 @@
 		font-weight: 410;
 	}
 
+	.summary ul li{
+		color: #191818;
+	}
+
 	em, i {
 		font-style: italic;
 	}
 
 	p {
-		color:#4A4848;
+		color: #191818;
 		margin: 0 0 2em 0;
 		line-height: 2.1em;
 	}
