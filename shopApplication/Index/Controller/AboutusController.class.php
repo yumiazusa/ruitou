@@ -18,7 +18,7 @@ class AboutusController extends MyController {
         $consultants=$consultantDb->where(array('is_show'=>1))->order('orderlist ASC')->select();
         $this->assign('consultants',$consultants);
         $caseDb=M('case');
-        $cases=$caseDb->where(array('is_show'=>1))->select();
+        $cases=$caseDb->where(array('is_show'=>1))->order('orderlist DESC')->select();
         $this->assign('cases',$cases);
         $this->display();
     }
