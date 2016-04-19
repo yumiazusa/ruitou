@@ -20,6 +20,12 @@ class CaseController extends MyController {
             case 3:
                 $this->display('case3');
                 break;
+            case 4:
+                $this->display('case4');
+                break;
+            case 5:
+                $this->display('case5');
+                break;
     		default:
     			$this->error();
     			break;
