@@ -94,6 +94,19 @@
   padding-bottom: 0;
 }
 
+.consultantsrow{
+  display: block;
+}
 
+.partner .col-md-6{
+  text-align: center;
+  margin-top:15px;
+}
 
+.partner div:nth-child(1){
+  margin-top:0;
+}
 
+.partner div:nth-child(2){
+  margin-top:0;
+}

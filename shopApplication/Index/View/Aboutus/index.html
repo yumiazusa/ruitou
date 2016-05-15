@@ -69,7 +69,7 @@
 
                     <div id="menu-1" class="about content">
                         <div class="row">
-                            <ul class="tabs">
+                            <ul class="tabs consultantsul">
                                 <li class="col-md-4 col-sm-4">
                                     <a href="#tab1" class="icon-item">
                                         <i class="fa fa-users"></i><font class="words">睿投·团队</font>
@@ -83,7 +83,7 @@
                                 <li class="col-md-4 col-sm-4">
                                     <a href="#tab3" class="icon-item">
                                         <i class="fa fa-sitemap"></i>
-                                        <font class="words">专项·分类</font>
+                                        <font class="words">合作·伙伴</font>
                                     </a> <!-- /.icon-item -->
                                 </li>
                             </ul> <!-- /.tabs -->
@@ -148,39 +148,23 @@
                                 </div>
 
                                 <div class="toggle-content text-center business" id="tab3">
-                                   <div class="business-scale">
-                                        <div>
-                                        <ul>自然、历史人文景观旅游区
-                                            <li>名胜风景</li>
-                                            <li>古城古镇</li>
-                                            <li>少数名族文化</li>
-                                            <li>历史、文化遗存</li>
-                                        </ul>
+                                        <div class="row partner">
+                                        <volist name="partners" id="v">
+                                        <div class="col-md-6">
+                                            <a href="<{$v.link}>" target="_blank"><img src="<{$v.image}>" width="100%"></a>
+                                            <a href="<{$v.link}>" target="_blank"><p><{$v.nav_title}></p></a>
                                         </div>
-                                        <div>
-                                        <ul>体验式旅游渡假区
-                                            <li>农业、乡村、生态体验</li>
-                                            <li>工业园、产业园体验</li>
-                                            <li>革命教育基地</li>
-                                            <li>博物馆、地质地貌、科学自然现象、动植物生态体验</li>
-                                            <li>宗教、信仰聚集地</li>
-                                        </ul>
+                                        </volist>
                                         </div>
-                                        <div>
-                                        <ul>主题乐园
-                                            <li>自然资源主题</li>
-                                            <li>历史资源主题</li>
-                                            <li>人文资源主题</li>
-                                            <li>养生养老主题</li>
-                                            <li>学府城主题</li>
-                                        </ul>
-                                        </div>
-                                       </div>
+
+
+
+
                                 </div>
                             </div> <!-- /.col-md-12 -->
                         </div> <!-- /.row -->
 
-                        <div class="row">
+                        <div class="row consultantsrow">
                             <foreach name="consultants" item="v">
                             <div class="col-md-4 col-sm-4 consultants">
                                 <div class="member-item">
@@ -231,7 +215,7 @@
 
                                 <div class="toggle-content text-center" id="tab5">
                                     <h2>睿投愿景</h2>
-                                    <p class="intro"><strong>云南睿投地产管理咨询有限公司</strong>以专业高效的管理团队，结合新兴科技、融合创意的思维，丰富的数据库与特色优质商户联盟支持，着力专业实效的分析及量身定制的投融资计划。兵马未动，策划先行。</p><br>
+                                    <p class="intro" style="text-align: left;"><strong>云南睿投地产管理咨询有限公司</strong>以专业高效的管理团队，结合新兴科技、融合创意的思维，丰富的数据库与特色优质商户联盟支持，着力专业实效的分析及量身定制的投融资计划。兵马未动，策划先行。</p><br>
                                 </div>
 
                                 <div class="toggle-content text-center" id="tab6">
@@ -339,17 +323,16 @@
     <script src="__PUBLIC__/Index/Aboutus/index/js/plugins.js"></script>
     <script src="__PUBLIC__/Index/Aboutus/index/js/main.js"></script>
     <script type="text/javascript">
-            
+
             jQuery(function ($) {
-
+               
                 $.supersized({
-
                     // Functionality
                     slide_interval: 6000, // Length between transitions
                     transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
                     transition_speed: 1000, // Speed of transition
 
-                    // Components                           
+                    // Components
                     slide_links: 'blank', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
                     slides: [ // Slideshow Images
                         {
@@ -359,10 +342,9 @@
                         }, {
                             image: '__PUBLIC__/Index/Aboutus/index/images/3.jpg'
                         }, {
-                            image: '__PUBLIC__/Index/Aboutus/index/images/5.jpg'
+                            image: '__PUBLIC__/Index/Aboutus/index/images/4.jpg'
                         }
                     ]
-
                 });
             });
     </script>
@@ -390,6 +372,15 @@
         $(".menu").slideToggle(300);
         return false;
     };
+
+    $('.consultantsul').find('li').click(function(){
+        var index = $(this).index();
+        if(index == 0){
+            $('.consultantsrow').slideDown(1000);
+        }else{
+            $('.consultantsrow').css('display','none');
+        }
+    });
 
 // 百度地图API功能
     var map = new BMap.Map("baidu-map");

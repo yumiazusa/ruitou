@@ -63,6 +63,57 @@ class IndexsController extends MyController {
          }
     }
 
+   // 后台首页
+    public function backgroundList() {
+        $db = M("index_background");
+        $list = $db->select();
+        $this->assign("data",$list);
+        $this->display();
+    }
+
+    public function editBackground(){
+        $id=I('get.id');
+        $db = M("index_background");
+        $list = $db->where(array('id'=>$id))->find();
+        $this->assign("data",$list);
+        $this->display();
+    }
+
+    public function doEditbackground(){
+        $data=I('post.');
+        if($_FILES['img']['name']!=""){
+            $data['img']=$this->uploadoneback($data['id']);
+            }
+        $mdl = M("index_background");
+
+            $rt=$mdl->where(array('id'=>$data['id']))->save($data);
+            if($rt){
+                $this->success("修改成功",U("Indexs/backgroundList"));
+                exit;
+            }
+        $this->error("修改失败");
+   }
+
+   //单图片上传
+    public function uploadoneback($id){
+        $upload = new \Think\Upload();
+        $upload->maxSize = 3145728;
+        $upload->exts    =array('jpg','gif','png','jpeg');
+         $upload->rootPath="Public/Index/Aboutus/index/images/";
+         $upload->savePath="";
+         $upload->saveName = $id;
+         $upload->autoSub = false;
+         $upload->replace = true;
+         $info=$upload->upload();
+         if(!$info) {
+                  $this->error($upload->getError());
+          }else{                                                 // 上传成功 获取上传文件信息
+             foreach($info as $file){
+               return '/Public/Index/Aboutus/index/images/'.$file['savepath'].$file['savename'];
+             }
+         }
+    }
+
     public function mainNav(){
         $db = M("index_mainnav");
         $data = $db->order('orderlist')->select();
@@ -91,6 +142,26 @@ class IndexsController extends MyController {
                 exit;
             }
         $this->error("修改失败");
+   }
+
+   public function addMainnav(){
+        $this->display();
+   }
+
+
+   public function doAddmainnav(){
+        $data=$_POST;
+        if($_FILES['image']['name']!=""){
+            $data['image']=$this->uploadone();
+            }
+        $mdl = M("index_mainnav");
+
+            $rt=$mdl->where(array('id'=>$data['id']))->add($data);
+            if($rt){
+                $this->success("添加成功",U("Indexs/mainNav"));
+                exit;
+            }
+        $this->error("添加失败");
    }
 
    /**

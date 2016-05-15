@@ -34,7 +34,7 @@
     <div id="breadcrumb">
         <a href="index.html" title="返回系统主页" class="tip-bottom">
             <i class="icon-home"></i>
-           首页管理
+            首页管理
         </a>
     </div>
    
@@ -49,9 +49,6 @@
     <div class="container-fluid">
           <div class="row-fluid">
              <div class="span12">
-            <div>
-              <a href="__CONTROLLER__/addMainnav" class="btn btn-info"><b>顾问合作伙伴</b></a>
-            </div>
               <div class="widget-box">
                   <div class="widget-title"> 
                         <span class="icon"><i class="icon-th"></i> </span>
@@ -61,32 +58,21 @@
                       <thead>
 
                         <tr>
-                          <th style="font-size:14px;">合作伙伴名称</th>
-                          <th style="font-size:14px;" width="40%">logo</th>
-                          <th style="font-size:14px;">跳转链接</th>
+                          <th style="font-size:14px;" width="50%">背景图</th>
                           <th style="font-size:14px;">排序</th>
-                          <th style="font-size:14px;">是否显示</th>
                           <th style="font-size:14px;">操作</th>
                         </tr>
                       </thead>
                       <tbody style="font-size:14px;">
-                       <foreach name="list" item="v">
+                        <volist name="data" id="v">
                          <tr class="odd gradeX" >
-                          <input type='hidden' value='<{$v.id}>'>
-                          <td style="text-align:center;"><{$v.nav_title}></td>
-                          <td style="text-align:center;"><img src="<{$v.image}>" width="100%" /></td>
-                          <td style="text-align:center;"><{$v.link}></td>
+                          <td style="text-align:center;"><img src="<{$v.img}>" width="100%" /></td>
                           <td style="text-align:center;"><{$v.orderlist}></td>
-                          <td style="text-align:center;">
-                             <if condition="$v.status eq 1">
-                                  <a data-status='1' title='点击切换' class='is_show' style="color:red; cursor: pointer;" href='#'>显示中</a>
-                             <else /><a data-status='0' title='点击切换' class='is_show' style="cursor: pointer;" href='#'>未使用</a>
-                             </if>
-                          </td>
                           <td class="center" style="text-align:center;">
-                            <a href="__CONTROLLER__/editMainnav/id/<{$v.id}>"><i class="icon-pencil"></i>编辑</a>
+                            <a href="__CONTROLLER__/editBackground/id/<{$v.id}>"><i class="icon-pencil"></i>编辑</a>
                           </td>
                         </tr>
+                      </volist>
                         </foreach>
                       </tbody>
                     </table>

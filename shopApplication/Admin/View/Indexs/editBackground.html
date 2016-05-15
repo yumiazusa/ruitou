@@ -63,32 +63,22 @@
                          <h5></h5>
                       </div>
                       <div class="widget-content nopadding">
-                         <form action="__CONTROLLER__/doEditmainnav" method="post" class="form-horizontal" onsubmit="return dosubmit()" enctype="multipart/form-data">
+                         <form action="__CONTROLLER__/doEditbackground" method="post" class="form-horizontal" onsubmit="return dosubmit()" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<{$data.id}>">
                             <div class="control-group">
-                              <label class="control-label">logo</label>
+                              <label class="control-label">背景图片</label>
                                 <div class="controls">
-                                    <img src="<{$data.image}>" style="width:100px;height:70px;"/><br>
-                                    <input type="file" name="image"/>
+                                    <img src="<{$data.img}>" style="width:100px;height:70px;"/><br>
+                                    <input type="file" name="img"/>
                                 </div>
-                               <label class="control-label">合作伙伴名称:</label>
-                               <div class="controls">
-                               <input type="text" class="span11 tip-right" style="width:200px;" name="nav_title" value="<{$data.nav_title}>" data-original-title="20字以内" placeholder="合作伙伴名称"/>
-                               </div>
-                            </div>
-                            <div class="control-group">
-                               <label class="control-label">跳转链接:</label>
-                               <div class="controls">
-                               <input type="text" class="span11 tip-right" style="width:200px;" name="link" value="<{$data.link}>" data-original-title="链接地址" placeholder="链接地址"/>
-                               </div>
                                <label class="control-label">排序:</label>
                                <div class="controls">
-                               <input type="text" class="span11 tip-right" style="width:200px;" name="orderlist" value="<{$data.orderlist}>" data-original-title="排序" placeholder="排序"/>
+                               <input type="text" class="span11 tip-right" style="width:200px;" name="orderlist" value="<{$data.orderlist}>" data-original-title="10个字" placeholder="首页描述"/>
                                </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">保存</button>
-                                <a class="btn btn-success" href='<{:U("mainNav")}>'>返回</a>
+                                <a class="btn btn-success" href='<{:U("backgroundList")}>'>返回</a>
                             </div>
                          </form>
                       </div>
