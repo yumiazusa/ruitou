@@ -59,7 +59,7 @@ a:hover {
 <div class="error_page"> <img alt="" src="/Main.jpg">
           <h1>我们非常抱歉...</h1>
           <p>你访问的页面不存在！</p>
-          <p><a href="">返回网站主页</a></p>
+          <p><a href="<{:U('Index/index')}>">返回网站主页</a></p>
         </div>
 <div class="content">
 <?php if(isset($e['file'])) {?>
